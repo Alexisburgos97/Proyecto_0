@@ -31,10 +31,10 @@
     <section class="container mt-5" id="home">
       <h2 style="text-align: center;">Alexis Burgos</h2>
         <div class="row">
-          <div class="col col-xl-4 col-lg-5 col-xs-12">
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-xs-12 col-ssm-12 mt-5">
             <img src="images/foto.jpg" alt="Foto de alexis">
           </div>
-          <div class="col col-xl-6 col-lg-5 col-xs-12 caja mt-5">
+          <div class="col col-xl-0 col-md-0 col-xs-0 col-ssm-0  caja mt-5">
             <p>Soy un apasionado por la informatica desde mi infancia, eso me llevo a ser autodidacta en muchas areas entre ellas la programación.</p>
             <p>Me destaco por mi capacidad de adaptarme a situaciones muy cambiantes. La responsabilidad, la eficiencia y la ética son los pilares mas importantes que tengo en cuenta a la hora de desarrollarme.</p>
             <p><b>Actualmente me encuentro en el último año de la carrera, realizando un proyecto web que tenga tanto Front-end como Back-end</b></p>
