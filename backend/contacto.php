@@ -1,4 +1,7 @@
 <?php
+include('../setup/configuracion.php');
+
+
 $destino = "pruebapedidos1997@gmail.com";
 $ncompleto = $_POST["nombreCompleto"];
 $email = $_POST["email"];
@@ -7,6 +10,13 @@ $mensaje = $_POST["mensaje"];
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
+if(empty($_POST['email'] )){
+    header("location: ../index.php?rta=error");
+    $_SESSION['rta'] = 'error';
+    die();
+}else{
+    $_SESSION['rta'] = 'ok';
+}
 
 $mensaje1 = <<<HTML
 <div style="background:lightyellow; font:12px Verdana; padding:10px; width:80%; border: 1px solid gray;">
@@ -22,15 +32,11 @@ $mensaje1 = <<<HTML
 </div>
 HTML;
 
+
 //var_dump($mensaje1);
 
-$mail = mail($destino,$motivo,$mensaje1,$headers);
+mail($destino,$motivo,$mensaje1,$headers);
 
-/*if($mail){
-    echo '<h4 style="widht:100%; text-align: center; background-color:limegreen; border:2px solid chartreuse;">Mensaje enviado exitosamente!<h4>';
-}else{
-    echo '<h4 style="widht:100%; text-align: center; background-color:red; border:2px solid darkred;">El Mensaje no puedo ser enviado<h4>';
-}*/
 
-header( "location: ../index.php" );
+header( "location: ../index.php?rta=ok" );
  ?>

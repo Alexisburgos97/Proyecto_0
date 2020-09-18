@@ -48,7 +48,6 @@ nav{
   box-shadow: 0 0 9px rgba(0,0,0,0.6);
   width: 100%;
   height: auto;
-  padding: 5px;
   position: relative;
 }
 
@@ -56,16 +55,16 @@ nav ul{
   font-family: serif;
   font-size: 17px;
   list-style: none;
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
 }
 
 nav ul li{
-  flex-direction: row;
   position: relative;
-  text-align: center;
+  text-align:center;
+  width: 100%;
 }
+
 
 section > div > form input,textarea,select,button{
   border-radius: 5px;
@@ -283,6 +282,7 @@ img:hover{
     max-width: 66.666667%;
   }
   .col-ssm-9 {
+
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%;
@@ -303,3 +303,19 @@ img:hover{
     max-width: 100%;
   }
 }
+
+.ok,
+.error,
+.info{ 
+  background: 12px center no-repeat; 
+  padding: 10px 10px 10px 55px; 
+  color: white; 
+  font: 16px Arial bolder; 
+  border-radius: 5px; 
+  margin: 50px auto; 
+  box-shadow: 0 0 10px rgba(0,0,0,.3);  
+}
+
+.info{ background-color: #6BC6E1; background-image: url(../images/ui-info.jpg); }
+.ok, .success{ background-color: #6CBF6C; background-image: url(../images/ui-success.jpg); }
+.error{ background-color: #DC6460; background-image: url(../images/ui-error.jpg); }

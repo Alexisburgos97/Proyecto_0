@@ -1,3 +1,6 @@
+<?php
+  include('setup/configuracion.php');
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -128,6 +131,22 @@
               </ul>
             </div>
           </div>
+    </section>
+
+    <section class="container">
+    <?php
+      if(isset($_SESSION['rta'])){
+        if($_SESSION['rta'] == 'ok'){
+          echo "<p class='ok'>Mensaje enviado exitosamente!</p>";
+        }else{
+          echo "<p class='error'>El mensaje no se ha podido enviar, intentelo nuevamente</p>";
+        }
+        unset($_SESSION['rta']);
+      }else{
+        echo "<p class='info'>Para hacernos llegar tu mensaje, completa el siguiente formulario</p>";
+      }
+
+    ?>
     </section>
 
     <section class="container" id="contacto">
