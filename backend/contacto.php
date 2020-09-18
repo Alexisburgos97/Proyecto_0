@@ -2,7 +2,7 @@
 include('../setup/configuracion.php');
 
 
-$destino = "pruebapedidos1997@gmail.com";
+$destino = "alexisburgos.info@gmail.com";
 $ncompleto = $_POST["nombreCompleto"];
 $email = $_POST["email"];
 $motivo = $_POST["motivo"];
